@@ -1,0 +1,1047 @@
+Ћ�}�         �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15796
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 21 2025 22:32:03[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (66) boot:  1 nvs_key          NVS keys         01 04 0000f000 00001000[0m
+[0;32mI (73) boot:  2 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (79) boot:  3 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (86) boot:  4 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (92) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (99) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (105) boot:  7 reserved         unknown          06 06 003e0000 0001a000[0m
+[0;32mI (112) boot:  8 fctry            WiFi data        01 02 003fa000 00006000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) boot: No factory image, trying OTA 0[0m
+[0;32mI (126) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=40d48h (265544) map[0m
+[0;32mI (224) esp_image: segment 1: paddr=00060d70 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (225) esp_image: segment 2: paddr=00060d94 vaddr=3ffbdb60 size=06270h ( 25200) load[0m
+[0;32mI (238) esp_image: segment 3: paddr=0006700c vaddr=40080000 size=0900ch ( 36876) load[0m
+[0;32mI (252) esp_image: segment 4: paddr=00070020 vaddr=400d0020 size=fc17ch (1032572) map[0m
+[0;32mI (605) esp_image: segment 5: paddr=0016c1a4 vaddr=4008900c size=14498h ( 83096) load[0m
+[0;32mI (652) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (658) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (658) boot: Disabling RNG early entropy source...[0m
+[0;32mI (669) cpu_start: Multicore app[0m
+[0;32mI (677) cpu_start: Pro cpu start user code[0m
+[0;32mI (677) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (677) app_init: Application information:[0m
+[0;32mI (678) app_init: Project name:     PRJ-PBL3-IOT-ESPIDF[0m
+[0;32mI (682) app_init: App version:      38be8df-dirty[0m
+[0;32mI (687) app_init: Compile time:     Mar 21 2025 22:34:04[0m
+[0;32mI (692) app_init: ELF file SHA256:  3657585c0...[0m
+[0;32mI (696) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (700) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (704) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (708) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (712) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (719) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (723) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (729) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (734) heap_init: At 3FFCBDD8 len 00014228 (80 KiB): DRAM[0m
+[0;32mI (739) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (744) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (750) heap_init: At 4009D4A4 len 00002B5C (10 KiB): IRAM[0m
+[0;32mI (757) spi_flash: detected chip: generic[0m
+[0;32mI (759) spi_flash: flash io: dio[0m
+[0;33mW (762) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (770) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (775) main_task: Started on CPU0[0m
+[0;32mI (785) main_task: Calling app_main()[0m
+[0;32mI (815) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (815) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (825) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;33mW (835) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+I2C bus initialized successfully
+[0;32mI (845) OLED: INTERFACE is i2c[0m
+[0;32mI (855) OLED: CONFIG_SDA_GPIO=21[0m
+[0;32mI (855) OLED: CONFIG_SCL_GPIO=22[0m
+[0;32mI (855) OLED: CONFIG_RESET_GPIO=15[0m
+[0;32mI (855) SSD1306: New i2c driver is used[0m
+[0;32mI (865) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (925) OLED: Panel is 128x64[0m
+[0;32mI (925) SSD1306: OLED configured successfully[0m
+OLED initialized successfully
+[0;32mI (1015) wifi:wifi driver task: 3ffd1650, prio:23, stack:6656, core=0[0m
+[0;32mI (1025) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (1025) wifi:wifi certification version: v7.0[0m
+[0;32mI (1025) wifi:config NVS flash: enabled[0m
+[0;32mI (1025) wifi:config nano formatting: disabled[0m
+[0;32mI (1035) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1035) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1035) wifi:Init management short buffer num: 32[0m
+[0;32mI (1045) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1045) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1055) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1055) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1065) wifi_init: rx ba win: 6[0m
+[0;32mI (1065) wifi_init: accept mbox: 6[0m
+[0;32mI (1065) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1065) wifi_init: udp mbox: 6[0m
+[0;32mI (1075) wifi_init: tcp mbox: 6[0m
+[0;32mI (1075) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1075) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1085) wifi_init: tcp mss: 1440[0m
+[0;32mI (1085) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1085) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1105) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (1125) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|08D1F9267E34[0m
+[0;32mI (1125) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (1125) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (1135) esp_rmaker_node: Node ID ----- NAGqiEzc7mAbULLpDqgw3k[0m
+[0;32mI (1135) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (1145) esp_rmaker_time: SNTP already initialized.[0m
+[0;32mI (1195) esp_rmaker_time: SNTP already initialized.[0m
+[0;32mI (1195) esp_rmaker_time: SNTP already initialized.[0m
+[0;32mI (1195) esp_rmaker_time: SNTP already initialized.[0m
+[0;32mI (1195) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (1195) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (1205) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (1215) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (1215) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (1215) esp_rmaker_local: Event 6[0m
+[0;32mI (1225) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1315) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (1315) wifi:enable tsf[0m
+[0;32mI (3735) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3745) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3755) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3765) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3885) wifi:connected with NHATRO BM T1S, aid = 1, channel 5, BW20, bssid = c4:70:ab:86:49:3b[0m
+[0;32mI (3885) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (3895) wifi:pm start, type: 1[0m
+
+[0;32mI (3895) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3925) wifi:<ba-add>idx:0 (ifx:0, c4:70:ab:86:49:3b), tid:0, ssn:1, winSize:64[0m
+[0;32mI (3955) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4945) esp_netif_handlers: sta ip: 192.168.110.169, mask: 255.255.255.0, gw: 192.168.110.1[0m
+[0;32mI (4945) app_network: Connected with IP Address:192.168.110.169[0m
+[0;32mI (4945) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (4955) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (4955) esp_rmaker_local: Enabling Local Control[0m
+[0;32mI (4965) esp_rmaker_local: Local Control Service Enabled[0m
+[0;32mI (4965) esp_rmaker_local: Starting ESP Local control with HTTP Transport and security version: 1[0m
+[0;32mI (4975) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (4995) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (4995) app_main: Control task: Received data[0m
+[0;32mI (4995) app_main: Updated Temperature: 26.00[0m
+[0;32mI (4995) app_main: Updated pH: 8.36[0m
+[0;32mI (4995) app_main: Updated Turbidity: 1093.42[0m
+[0;32mI (5005) app_main: pH: 8.36, Turbidity: 1093.42 NTU, Temp: 26.00 C[0m
+[0;32mI (5015) esp_https_server: Starting server[0m
+[0;32mI (5015) esp_https_server: Server listening on port 8080[0m
+[0;32mI (5015) esp_rmaker_local: esp_local_ctrl service started with name : NAGqiEzc7mAbULLpDqgw3k[0m
+[0;32mI (5025) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (5035) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (5035) main_task: Returned from app_main()[0m
+[0;32mI (5055) wifi:<ba-add>idx:1 (ifx:0, c4:70:ab:86:49:3b), tid:7, ssn:3, winSize:64[0m
+Updated OLED display
+[0;32mI (5165) app_main: Display task: Received data from queue[0m
+
+[0;32mI (5825) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8165) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (8175) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (8185) esp_rmaker_node_config: Generated Node config of length 2262[0m
+[0;32mI (8205) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (8205) esp_rmaker_param: Reporting params (init): {"Temperature Sensor":{"Name":"Temperature Sensor","Temperature":26.00000},"pH Sensor":{"Name":"pH Sensor","pH":8.35611},"Turbidity Sensor":{"Name":"Turbidity Sensor","Turbidity":1093.42163},"Servo":{"Name":"Servo","Power":false},"Water Drain":{"Name":"Water Drain","Power":false},"Schedule":{"Schedules":[]},"Local Control":{"POP":"6d720c3e","Type":1}}[0m
+[1;31mE (8235) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[1;31mE (8235) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[1;31mE (8245) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[0;32mI (15035) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (15035) app_main: Control task: Received data[0m
+[1;31mE (15035) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[0;32mI (15045) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000},"pH Sensor":{"pH":8.35611},"Turbidity Sensor":{"Turbidity":1093.42163}}[0m
+[0;32mI (15065) app_main: Updated Temperature: 26.00[0m
+[1;31mE (15065) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[0;32mI (15065) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.11039}}[0m
+[0;32mI (15075) app_main: Updated pH: 8.11[0m
+[1;31mE (15075) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[0;32mI (15085) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":951.50031}}[0m
+[0;32mI (15095) app_main: Updated Turbidity: 951.50[0m
+[0;32mI (15095) app_main: pH: 8.11, Turbidity: 951.50 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (15275) app_main: Display task: Received data from queue[0m
+
+[0;32mI (25075) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (25105) app_main: Control task: Received data[0m
+[1;31mE (25105) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[0;32mI (25105) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (25115) app_main: Updated Temperature: 26.00[0m
+[1;31mE (25115) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[0;32mI (25125) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.16743}}[0m
+[0;32mI (25135) app_main: Updated pH: 8.17[0m
+[1;31mE (25135) esp_rmaker_param: Current time not yet available. Cannot report time series data.[0m
+[0;32mI (25145) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":892.82831}}[0m
+[0;32mI (25155) app_main: Updated Turbidity: 892.83[0m
+[0;32mI (25155) app_main: pH: 8.17, Turbidity: 892.83 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (25375) app_main: Display task: Received data from queue[0m
+
+[0;32mI (33395) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (33405) esp_rmaker_time: The current time is: Fri Mar 21 22:38:40 2025 +0700[UTC], DST: No.[0m
+[0;32mI (35115) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (35155) app_main: Control task: Received data[0m
+[0;32mI (35155) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (35165) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (35165) app_main: Updated Temperature: 26.00[0m
+[0;32mI (35165) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (35175) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.28152}}[0m
+[0;32mI (35185) app_main: Updated pH: 8.28[0m
+[0;32mI (35185) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (35195) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":882.91016}}[0m
+[0;32mI (35195) app_main: Updated Turbidity: 882.91[0m
+[0;32mI (35195) app_main: pH: 8.28, Turbidity: 882.91 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (35485) app_main: Display task: Received data from queue[0m
+
+[0;32mI (45155) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (45205) app_main: Control task: Received data[0m
+[0;32mI (45205) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (45215) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (45215) app_main: Updated Temperature: 26.00[0m
+[0;32mI (45215) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (45225) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.31223}}[0m
+[0;32mI (45235) app_main: Updated pH: 8.31[0m
+[0;32mI (45235) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (45245) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":936.17004}}[0m
+[0;32mI (45245) app_main: Updated Turbidity: 936.17[0m
+[0;32mI (45245) app_main: pH: 8.31, Turbidity: 936.17 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (45605) app_main: Display task: Received data from queue[0m
+
+[0;32mI (55195) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (55255) app_main: Control task: Received data[0m
+[0;32mI (55255) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (55265) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (55265) app_main: Updated Temperature: 26.00[0m
+[0;32mI (55265) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (55275) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.32979}}[0m
+[0;32mI (55285) app_main: Updated pH: 8.33[0m
+[0;32mI (55285) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (55295) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":878.84656}}[0m
+[0;32mI (55305) app_main: Updated Turbidity: 878.85[0m
+[0;32mI (55305) app_main: pH: 8.33, Turbidity: 878.85 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (55715) app_main: Display task: Received data from queue[0m
+
+[0;32mI (65235) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (65305) app_main: Control task: Received data[0m
+[0;32mI (65305) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (65315) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (65315) app_main: Updated Temperature: 26.00[0m
+[0;32mI (65315) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (65325) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.23764}}[0m
+[0;32mI (65325) app_main: Updated pH: 8.24[0m
+[0;32mI (65335) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (65345) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":822.50818}}[0m
+[0;32mI (65345) app_main: Updated Turbidity: 822.51[0m
+[0;32mI (65355) esp_rmaker_param: Reporting alert: {"esp.alert.str":"High turbidity"}[0m
+[0;32mI (65355) app_driver: Drain set to ON[0m
+[0;32mI (65365) esp_rmaker_param: Reporting params: {"Water Drain":{"Power":true}}[0m
+[0;32mI (65375) app_main: pH: 8.24, Turbidity: 822.51 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (65815) app_main: Display task: Received data from queue[0m
+
+[0;32mI (75275) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (75375) app_main: Control task: Received data[0m
+[0;32mI (75375) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (75385) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (75385) app_main: Updated Temperature: 26.00[0m
+[0;32mI (75395) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (75395) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.09284}}[0m
+[0;32mI (75405) app_main: Updated pH: 8.09[0m
+[0;32mI (75405) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (75415) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":822.96594}}[0m
+[0;32mI (75415) app_main: Updated Turbidity: 822.97[0m
+[0;32mI (75415) app_main: pH: 8.09, Turbidity: 822.97 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (75915) app_main: Display task: Received data from queue[0m
+
+[0;32mI (85315) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (85425) app_main: Control task: Received data[0m
+[0;32mI (85425) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (85435) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (85435) app_main: Updated Temperature: 26.00[0m
+[0;32mI (85435) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (85445) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.88661}}[0m
+[0;32mI (85445) app_main: Updated pH: 7.89[0m
+[0;32mI (85455) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (85465) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":1317.23474}}[0m
+[0;32mI (85465) app_main: Updated Turbidity: 1317.23[0m
+[0;32mI (85475) app_main: pH: 7.89, Turbidity: 1317.23 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (86015) app_main: Display task: Received data from queue[0m
+
+[0;32mI (95355) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (95475) app_main: Control task: Received data[0m
+[0;32mI (95475) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (95485) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (95485) app_main: Updated Temperature: 26.00[0m
+[0;32mI (95485) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (95495) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.24642}}[0m
+[0;32mI (95505) app_main: Updated pH: 8.25[0m
+[0;32mI (95505) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (95515) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":822.82837}}[0m
+[0;32mI (95515) app_main: Updated Turbidity: 822.83[0m
+[0;32mI (95515) app_main: pH: 8.25, Turbidity: 822.83 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (96115) app_main: Display task: Received data from queue[0m
+
+[0;32mI (105395) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (105525) app_main: Control task: Received data[0m
+[0;32mI (105525) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (105535) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (105535) app_main: Updated Temperature: 26.00[0m
+[0;32mI (105545) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (105545) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.79885}}[0m
+[0;32mI (105555) app_main: Updated pH: 7.80[0m
+[0;32mI (105555) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (105565) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":823.78143}}[0m
+[0;32mI (105575) app_main: Updated Turbidity: 823.78[0m
+[0;32mI (105575) app_main: pH: 7.80, Turbidity: 823.78 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (106255) app_main: Display task: Received data from queue[0m
+
+[0;32mI (115435) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (115575) app_main: Control task: Received data[0m
+[0;32mI (115575) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (115585) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (115585) app_main: Updated Temperature: 26.00[0m
+[0;32mI (115595) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (115595) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.31223}}[0m
+[0;32mI (115605) app_main: Updated pH: 8.31[0m
+[0;32mI (115605) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (115615) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":825.83600}}[0m
+[0;32mI (115615) app_main: Updated Turbidity: 825.84[0m
+[0;32mI (115625) app_main: pH: 8.31, Turbidity: 825.84 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (116365) app_main: Display task: Received data from queue[0m
+
+[0;32mI (125475) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (125625) app_main: Control task: Received data[0m
+[0;32mI (125625) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (125635) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (125635) app_main: Updated Temperature: 26.00[0m
+[0;32mI (125635) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (125645) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.05774}}[0m
+[0;32mI (125655) app_main: Updated pH: 8.06[0m
+[0;32mI (125655) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (125665) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":825.80804}}[0m
+[0;32mI (125665) app_main: Updated Turbidity: 825.81[0m
+[0;32mI (125675) esp_rmaker_param: Reporting alert: {"esp.alert.str":"Everything is OKE"}[0m
+[0;32mI (125685) app_driver: Drain set to OFF[0m
+[0;32mI (125685) esp_rmaker_param: Reporting params: {"Water Drain":{"Power":false}}[0m
+[0;32mI (125695) app_main: pH: 8.06, Turbidity: 825.81 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (126465) app_main: Display task: Received data from queue[0m
+
+[0;32mI (135515) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (135695) app_main: Control task: Received data[0m
+[0;32mI (135695) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (135705) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (135705) app_main: Updated Temperature: 26.00[0m
+[0;32mI (135705) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (135715) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.23325}}[0m
+[0;32mI (135725) app_main: Updated pH: 8.23[0m
+[0;32mI (135725) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (135735) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":825.38116}}[0m
+[0;32mI (135745) app_main: Updated Turbidity: 825.38[0m
+[0;32mI (135745) app_main: pH: 8.23, Turbidity: 825.38 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (136565) app_main: Display task: Received data from queue[0m
+
+[0;32mI (145555) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (145745) app_main: Control task: Received data[0m
+[0;32mI (145745) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (145755) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (145755) app_main: Updated Temperature: 26.00[0m
+[0;32mI (145755) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (145765) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.15427}}[0m
+[0;32mI (145775) app_main: Updated pH: 8.15[0m
+[0;32mI (145775) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (145785) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":825.10693}}[0m
+[0;32mI (145785) app_main: Updated Turbidity: 825.11[0m
+[0;32mI (145795) app_main: pH: 8.15, Turbidity: 825.11 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (146665) app_main: Display task: Received data from queue[0m
+
+[0;32mI (155595) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (155795) app_main: Control task: Received data[0m
+[0;32mI (155795) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (155805) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (155805) app_main: Updated Temperature: 26.00[0m
+[0;32mI (155815) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (155815) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.02702}}[0m
+[0;32mI (155825) app_main: Updated pH: 8.03[0m
+[0;32mI (155825) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (155835) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":824.56030}}[0m
+[0;32mI (155845) app_main: Updated Turbidity: 824.56[0m
+[0;32mI (155845) app_main: pH: 8.03, Turbidity: 824.56 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (156765) app_main: Display task: Received data from queue[0m
+
+[0;32mI (165635) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (165845) app_main: Control task: Received data[0m
+[0;32mI (165845) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (165855) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (165855) app_main: Updated Temperature: 26.00[0m
+[0;32mI (165865) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (165865) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.85589}}[0m
+[0;32mI (165875) app_main: Updated pH: 7.86[0m
+[0;32mI (165875) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (165885) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":826.56085}}[0m
+[0;32mI (165895) app_main: Updated Turbidity: 826.56[0m
+[0;32mI (165895) app_main: pH: 7.86, Turbidity: 826.56 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (166865) app_main: Display task: Received data from queue[0m
+
+[0;32mI (175675) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (175895) app_main: Control task: Received data[0m
+[0;32mI (175895) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (175905) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (175905) app_main: Updated Temperature: 26.00[0m
+[0;32mI (175915) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (175915) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.21570}}[0m
+[0;32mI (175925) app_main: Updated pH: 8.22[0m
+[0;32mI (175925) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (175935) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":867.96539}}[0m
+[0;32mI (175935) app_main: Updated Turbidity: 867.97[0m
+[0;32mI (175945) app_main: pH: 8.22, Turbidity: 867.97 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (176975) app_main: Display task: Received data from queue[0m
+
+[0;32mI (185715) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (185945) app_main: Control task: Received data[0m
+[0;32mI (185945) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (185955) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (185955) app_main: Updated Temperature: 26.00[0m
+[0;32mI (185955) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (185965) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.96559}}[0m
+[0;32mI (185975) app_main: Updated pH: 7.97[0m
+[0;32mI (185975) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (185985) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":896.43152}}[0m
+[0;32mI (185995) app_main: Updated Turbidity: 896.43[0m
+[0;32mI (185995) app_main: pH: 7.97, Turbidity: 896.43 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (187075) app_main: Display task: Received data from queue[0m
+
+[0;32mI (195755) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (195995) app_main: Control task: Received data[0m
+[0;32mI (195995) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (196005) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (196005) app_main: Updated Temperature: 26.00[0m
+[0;32mI (196005) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (196015) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.71548}}[0m
+[0;32mI (196025) app_main: Updated pH: 7.72[0m
+[0;32mI (196025) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (196035) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":921.69092}}[0m
+[0;32mI (196035) app_main: Updated Turbidity: 921.69[0m
+[0;32mI (196045) app_main: pH: 7.72, Turbidity: 921.69 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (197175) app_main: Display task: Received data from queue[0m
+
+[0;32mI (205795) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (206045) app_main: Control task: Received data[0m
+[0;32mI (206045) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (206055) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (206055) app_main: Updated Temperature: 26.00[0m
+[0;32mI (206055) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (206065) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.25958}}[0m
+[0;32mI (206075) app_main: Updated pH: 8.26[0m
+[0;32mI (206075) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (206085) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":882.36646}}[0m
+[0;32mI (206095) app_main: Updated Turbidity: 882.37[0m
+[0;32mI (206095) esp_rmaker_param: Reporting alert: {"esp.alert.str":"High turbidity"}[0m
+[0;32mI (206105) app_driver: Drain set to ON[0m
+[0;32mI (206105) esp_rmaker_param: Reporting params: {"Water Drain":{"Power":true}}[0m
+[0;32mI (206115) app_main: pH: 8.26, Turbidity: 882.37 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (207285) app_main: Display task: Received data from queue[0m
+
+[0;32mI (215835) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (216115) app_main: Control task: Received data[0m
+[0;32mI (216115) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (216125) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (216125) app_main: Updated Temperature: 26.00[0m
+[0;32mI (216135) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (216135) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.78568}}[0m
+[0;32mI (216145) app_main: Updated pH: 7.79[0m
+[0;32mI (216145) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (216155) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":885.49329}}[0m
+[0;32mI (216165) app_main: Updated Turbidity: 885.49[0m
+[0;32mI (216165) app_main: pH: 7.79, Turbidity: 885.49 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (217385) app_main: Display task: Received data from queue[0m
+
+[0;32mI (225875) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (226165) app_main: Control task: Received data[0m
+[0;32mI (226165) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (226175) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (226175) app_main: Updated Temperature: 26.00[0m
+[0;32mI (226175) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (226185) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.23325}}[0m
+[0;32mI (226195) app_main: Updated pH: 8.23[0m
+[0;32mI (226195) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (226205) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":884.90802}}[0m
+[0;32mI (226205) app_main: Updated Turbidity: 884.91[0m
+[0;32mI (226215) app_main: pH: 8.23, Turbidity: 884.91 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (227485) app_main: Display task: Received data from queue[0m
+
+[0;32mI (235915) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (236215) app_main: Control task: Received data[0m
+[0;32mI (236215) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (236225) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (236225) app_main: Updated Temperature: 26.00[0m
+[0;32mI (236235) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (236235) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.25080}}[0m
+[0;32mI (236245) app_main: Updated pH: 8.25[0m
+[0;32mI (236245) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (236255) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":934.43872}}[0m
+[0;32mI (236255) app_main: Updated Turbidity: 934.44[0m
+[0;32mI (236265) app_main: pH: 8.25, Turbidity: 934.44 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (237595) app_main: Display task: Received data from queue[0m
+
+[0;32mI (245955) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (246265) app_main: Control task: Received data[0m
+[0;32mI (246265) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (246275) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (246275) app_main: Updated Temperature: 26.00[0m
+[0;32mI (246275) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (246285) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.17182}}[0m
+[0;32mI (246295) app_main: Updated pH: 8.17[0m
+[0;32mI (246295) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[0;32mI (246305) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":884.50494}}[0m
+[0;32mI (246305) app_main: Updated Turbidity: 884.50[0m
+[0;32mI (246315) app_main: pH: 8.17, Turbidity: 884.50 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (247695) app_main: Display task: Received data from queue[0m
+
+[0;32mI (255995) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (256315) app_main: Control task: Received data[0m
+[0;32mI (256315) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (256325) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (256325) app_main: Updated Temperature: 26.00[0m
+[0;32mI (256325) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[0;32mI (256335) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.22886}}[0m
+[1;31mE (256335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (256345) app_main: Updated pH: 8.23[0m
+[0;32mI (256345) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (256355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (256365) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":881.88000}}[0m
+[1;31mE (256365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (256375) app_main: Updated Turbidity: 881.88[0m
+[0;32mI (256385) app_main: pH: 8.23, Turbidity: 881.88 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (257795) app_main: Display task: Received data from queue[0m
+
+[0;32mI (266035) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (266385) app_main: Control task: Received data[0m
+[0;32mI (266385) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (266395) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (266395) app_main: Updated Temperature: 26.00[0m
+[0;32mI (266405) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (266405) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (266405) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.24203}}[0m
+[1;31mE (266415) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (266425) app_main: Updated pH: 8.24[0m
+[0;32mI (266425) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (266435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (266435) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":823.95740}}[0m
+[1;31mE (266445) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (266455) app_main: Updated Turbidity: 823.96[0m
+[0;32mI (266455) app_main: pH: 8.24, Turbidity: 823.96 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (267895) app_main: Display task: Received data from queue[0m
+
+[0;32mI (276075) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (276465) app_main: Control task: Received data[0m
+[0;32mI (276465) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (276475) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (276475) app_main: Updated Temperature: 26.00[0m
+[0;32mI (276475) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (276485) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (276485) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.21131}}[0m
+[1;31mE (276495) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (276505) app_main: Updated pH: 8.21[0m
+[0;32mI (276505) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (276515) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (276515) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":821.83856}}[0m
+[1;31mE (276525) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (276535) app_main: Updated Turbidity: 821.84[0m
+[0;32mI (276535) app_main: pH: 8.21, Turbidity: 821.84 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (277995) app_main: Display task: Received data from queue[0m
+
+[0;32mI (286115) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (286545) app_main: Control task: Received data[0m
+[0;32mI (286545) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (286555) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (286555) app_main: Updated Temperature: 26.00[0m
+[0;32mI (286555) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (286565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286565) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.35173}}[0m
+[1;31mE (286575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286585) app_main: Updated pH: 8.35[0m
+[0;32mI (286585) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (286595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286595) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":825.83002}}[0m
+[1;31mE (286605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286615) app_main: Updated Turbidity: 825.83[0m
+[0;32mI (286615) app_main: pH: 8.35, Turbidity: 825.83 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (288095) app_main: Display task: Received data from queue[0m
+
+[0;32mI (296155) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (296625) app_main: Control task: Received data[0m
+[0;32mI (296625) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (296635) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (296635) app_main: Updated Temperature: 26.00[0m
+[0;32mI (296635) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (296645) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (296645) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.24203}}[0m
+[1;31mE (296655) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (296665) app_main: Updated pH: 8.24[0m
+[0;32mI (296665) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (296675) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (296675) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":825.92389}}[0m
+[1;31mE (296685) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (296695) app_main: Updated Turbidity: 825.92[0m
+[0;32mI (296695) app_main: pH: 8.24, Turbidity: 825.92 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (298195) app_main: Display task: Received data from queue[0m
+
+[0;32mI (306195) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (306705) app_main: Control task: Received data[0m
+[0;32mI (306705) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (306715) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (306715) app_main: Updated Temperature: 26.00[0m
+[0;32mI (306715) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (306725) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306725) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.36928}}[0m
+[1;31mE (306735) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306745) app_main: Updated pH: 8.37[0m
+[0;32mI (306745) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (306755) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306755) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":819.30688}}[0m
+[1;31mE (306765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306775) app_main: Updated Turbidity: 819.31[0m
+[0;32mI (306775) app_main: pH: 8.37, Turbidity: 819.31 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (308295) app_main: Display task: Received data from queue[0m
+
+[0;32mI (316235) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (316785) app_main: Control task: Received data[0m
+[0;32mI (316785) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (316795) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (316795) app_main: Updated Temperature: 26.00[0m
+[0;32mI (316805) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (316805) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (316805) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.88661}}[0m
+[1;31mE (316815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (316825) app_main: Updated pH: 7.89[0m
+[0;32mI (316825) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (316835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (316835) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":825.65680}}[0m
+[1;31mE (316845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (316855) app_main: Updated Turbidity: 825.66[0m
+[0;32mI (316855) esp_rmaker_param: Reporting alert: {"esp.alert.str":"Everything is OKE"}[0m
+[1;31mE (316865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (316875) app_driver: Drain set to OFF[0m
+[0;32mI (316875) esp_rmaker_param: Reporting params: {"Water Drain":{"Power":false}}[0m
+[1;31mE (316885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (316885) app_main: pH: 7.89, Turbidity: 825.66 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (318395) app_main: Display task: Received data from queue[0m
+
+[0;32mI (326275) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (326895) app_main: Control task: Received data[0m
+[0;32mI (326895) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (326905) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (326905) app_main: Updated Temperature: 26.00[0m
+[0;32mI (326905) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (326915) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (326915) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.79446}}[0m
+[1;31mE (326925) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (326935) app_main: Updated pH: 7.79[0m
+[0;32mI (326935) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (326945) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (326945) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":826.58728}}[0m
+[1;31mE (326955) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (326965) app_main: Updated Turbidity: 826.59[0m
+[0;32mI (326965) app_main: pH: 7.79, Turbidity: 826.59 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (328495) app_main: Display task: Received data from queue[0m
+
+[0;32mI (336315) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (336975) app_main: Control task: Received data[0m
+[0;32mI (336975) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (336985) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (336985) app_main: Updated Temperature: 26.00[0m
+[0;32mI (336985) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (336995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (336995) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.22886}}[0m
+[1;31mE (337005) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (337015) app_main: Updated pH: 8.23[0m
+[0;32mI (337015) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (337025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (337025) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":824.82263}}[0m
+[1;31mE (337035) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (337045) app_main: Updated Turbidity: 824.82[0m
+[0;32mI (337045) app_main: pH: 8.23, Turbidity: 824.82 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (338605) app_main: Display task: Received data from queue[0m
+
+[0;32mI (346355) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (347055) app_main: Control task: Received data[0m
+[0;32mI (347055) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (347065) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (347065) app_main: Updated Temperature: 26.00[0m
+[0;32mI (347065) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (347075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (347075) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.15866}}[0m
+[1;31mE (347085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (347095) app_main: Updated pH: 8.16[0m
+[0;32mI (347095) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (347105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (347105) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":823.40393}}[0m
+[1;31mE (347115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (347125) app_main: Updated Turbidity: 823.40[0m
+[0;32mI (347125) app_main: pH: 8.16, Turbidity: 823.40 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (348705) app_main: Display task: Received data from queue[0m
+
+[0;32mI (356395) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (357135) app_main: Control task: Received data[0m
+[0;32mI (357135) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (357145) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (357145) app_main: Updated Temperature: 26.00[0m
+[0;32mI (357145) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (357155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (357155) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.03141}}[0m
+[1;31mE (357165) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (357175) app_main: Updated pH: 8.03[0m
+[0;32mI (357175) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (357185) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (357185) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":826.31989}}[0m
+[1;31mE (357195) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (357205) app_main: Updated Turbidity: 826.32[0m
+[0;32mI (357205) app_main: pH: 8.03, Turbidity: 826.32 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (358805) app_main: Display task: Received data from queue[0m
+
+[0;32mI (366435) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (367215) app_main: Control task: Received data[0m
+[0;32mI (367215) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (367225) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (367225) app_main: Updated Temperature: 26.00[0m
+[0;32mI (367225) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (367235) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (367235) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.89538}}[0m
+[1;31mE (367245) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (367255) app_main: Updated pH: 7.90[0m
+[0;32mI (367255) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (367265) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (367265) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":831.18951}}[0m
+[1;31mE (367275) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (367285) app_main: Updated Turbidity: 831.19[0m
+[0;32mI (367285) app_main: pH: 7.90, Turbidity: 831.19 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (368925) app_main: Display task: Received data from queue[0m
+
+[0;32mI (376475) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (377295) app_main: Control task: Received data[0m
+[0;32mI (377295) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (377305) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (377305) app_main: Updated Temperature: 26.00[0m
+[0;32mI (377315) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (377315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (377325) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.27713}}[0m
+[1;31mE (377325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (377335) app_main: Updated pH: 8.28[0m
+[0;32mI (377335) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (377345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (377355) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":824.88409}}[0m
+[1;31mE (377355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (377365) app_main: Updated Turbidity: 824.88[0m
+[0;32mI (377365) esp_rmaker_param: Reporting alert: {"esp.alert.str":"High turbidity"}[0m
+[1;31mE (377375) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (377385) app_driver: Drain set to ON[0m
+[0;32mI (377385) esp_rmaker_param: Reporting params: {"Water Drain":{"Power":true}}[0m
+[1;31mE (377395) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (377395) app_main: pH: 8.28, Turbidity: 824.88 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (379025) app_main: Display task: Received data from queue[0m
+
+[0;32mI (386515) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (387405) app_main: Control task: Received data[0m
+[0;32mI (387405) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (387415) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (387415) app_main: Updated Temperature: 26.00[0m
+[0;32mI (387415) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (387425) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (387425) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.25958}}[0m
+[1;31mE (387435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (387445) app_main: Updated pH: 8.26[0m
+[0;32mI (387445) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (387455) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (387455) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":878.93451}}[0m
+[1;31mE (387465) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (387475) app_main: Updated Turbidity: 878.93[0m
+[0;32mI (387475) app_main: pH: 8.26, Turbidity: 878.93 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (389135) app_main: Display task: Received data from queue[0m
+
+[0;32mI (396555) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (397485) app_main: Control task: Received data[0m
+[0;32mI (397485) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (397495) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (397495) app_main: Updated Temperature: 26.00[0m
+[0;32mI (397495) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (397505) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (397505) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.14549}}[0m
+[1;31mE (397515) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (397525) app_main: Updated pH: 8.15[0m
+[0;32mI (397525) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (397535) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (397535) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":891.78442}}[0m
+[1;31mE (397545) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (397555) app_main: Updated Turbidity: 891.78[0m
+[0;32mI (397555) app_main: pH: 8.15, Turbidity: 891.78 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (399235) app_main: Display task: Received data from queue[0m
+
+[0;32mI (406595) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (407565) app_main: Control task: Received data[0m
+[0;32mI (407565) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (407575) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (407575) app_main: Updated Temperature: 26.00[0m
+[0;32mI (407575) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (407585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (407585) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.87783}}[0m
+[1;31mE (407595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (407605) app_main: Updated pH: 7.88[0m
+[0;32mI (407605) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (407615) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (407615) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":891.49976}}[0m
+[1;31mE (407625) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (407635) app_main: Updated Turbidity: 891.50[0m
+[0;32mI (407635) app_main: pH: 7.88, Turbidity: 891.50 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (409335) app_main: Display task: Received data from queue[0m
+
+[0;32mI (416635) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (417645) app_main: Control task: Received data[0m
+[0;32mI (417645) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (417655) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (417655) app_main: Updated Temperature: 26.00[0m
+[0;32mI (417665) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (417665) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (417675) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.11039}}[0m
+[1;31mE (417675) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (417685) app_main: Updated pH: 8.11[0m
+[0;32mI (417685) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (417695) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (417705) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":896.28827}}[0m
+[1;31mE (417705) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (417715) app_main: Updated Turbidity: 896.29[0m
+[0;32mI (417715) app_main: pH: 8.11, Turbidity: 896.29 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (419435) app_main: Display task: Received data from queue[0m
+
+[1;31mE (419815) security1: Secure session not established[0m
+[1;31mE (419825) protocomm: Decryption of response failed for endpoint esp_local_ctrl/control[0m
+[1;31mE (419825) protocomm_httpd: Data handler failed[0m
+[0;33mW (419825) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;33mW (419835) protocomm_httpd: Resetting socket session id as socket 58was closed[0m
+[0;33mW (419945) protocomm_httpd: Closing session with ID: 2861598062[0m
+[0;32mI (420345) app_network: Secured session established![0m
+[0;32mI (420415) esp_rmaker_param: Received params: {"Servo":{"Power":true}}[0m
+[0;32mI (420415) esp_rmaker_param: Found 1 params in write request for Servo[0m
+[0;32mI (420415) app_main: Received write request via : Local[0m
+[0;32mI (420425) app_main: Received value = true for Servo - Power[0m
+Servo angle set to: 1
+[0;32mI (420435) esp_rmaker_param: Reporting params: {"Servo":{"Power":true}}[0m
+[0;32mI (420445) app_main: Servo angle changed to: 1 (from RainMaker)[0m
+
+[0;32mI (422265) esp_rmaker_param: Received params: {"Servo":{"Power":false}}[0m
+[0;32mI (422265) esp_rmaker_param: Found 1 params in write request for Servo[0m
+[0;32mI (422265) app_main: Received write request via : Local[0m
+[0;32mI (422275) app_main: Received value = false for Servo - Power[0m
+Servo angle set to: 2
+[0;32mI (422275) esp_rmaker_param: Reporting params: {"Servo":{"Power":false}}[0m
+[1;31mE (422285) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (422295) app_main: Servo angle changed to: 0 (from RainMaker)[0m
+
+[0;32mI (424005) esp_rmaker_param: Received params: {"Servo":{"Power":true}}[0m
+[0;32mI (424005) esp_rmaker_param: Found 1 params in write request for Servo[0m
+[0;32mI (424015) app_main: Received write request via : Local[0m
+[0;32mI (424015) app_main: Received value = true for Servo - Power[0m
+Servo angle set to: 1
+[0;32mI (424025) esp_rmaker_param: Reporting params: {"Servo":{"Power":true}}[0m
+[1;31mE (424025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (424035) app_main: Servo angle changed to: 1 (from RainMaker)[0m
+
+[0;32mI (425135) esp_rmaker_param: Received params: {"Servo":{"Power":false}}[0m
+[0;32mI (425135) esp_rmaker_param: Found 1 params in write request for Servo[0m
+[0;32mI (425135) app_main: Received write request via : Local[0m
+[0;32mI (425145) app_main: Received value = false for Servo - Power[0m
+Servo angle set to: 2
+[0;32mI (425155) esp_rmaker_param: Reporting params: {"Servo":{"Power":false}}[0m
+[0;32mI (425165) app_main: Servo angle changed to: 0 (from RainMaker)[0m
+
+[0;32mI (426675) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (427725) app_main: Control task: Received data[0m
+[0;32mI (427725) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[1;31mE (427725) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (427725) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[1;31mE (427735) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (427745) app_main: Updated Temperature: 26.00[0m
+[0;32mI (427745) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (427755) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (427765) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.31662}}[0m
+[1;31mE (427765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (427775) app_main: Updated pH: 8.32[0m
+[0;32mI (427775) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (427785) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (427795) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":897.28119}}[0m
+[1;31mE (427795) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (427805) app_main: Updated Turbidity: 897.28[0m
+[0;32mI (427805) app_main: pH: 8.32, Turbidity: 897.28 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (429545) app_main: Display task: Received data from queue[0m
+
+[0;33mW (429955) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[1;31mE (429955) security1: Closing old session with id 1300158653[0m
+[0;32mI (430345) app_network: Secured session established![0m
+[0;32mI (430395) esp_rmaker_node_config: Generated Node config of length 2262[0m
+[0;32mI (436715) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (437815) app_main: Control task: Received data[0m
+[0;32mI (437815) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (437825) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (437825) app_main: Updated Temperature: 26.00[0m
+[0;32mI (437835) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (437835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (437845) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.78568}}[0m
+[1;31mE (437845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (437855) app_main: Updated pH: 7.79[0m
+[0;32mI (437855) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (437865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (437875) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":886.75909}}[0m
+[1;31mE (437875) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (437885) app_main: Updated Turbidity: 886.76[0m
+[0;32mI (437895) esp_rmaker_param: Reporting alert: {"esp.alert.str":"Everything is OKE"}[0m
+[1;31mE (437895) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (437905) app_driver: Drain set to OFF[0m
+[0;32mI (437905) esp_rmaker_param: Reporting params: {"Water Drain":{"Power":false}}[0m
+[1;31mE (437915) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (437925) app_main: pH: 7.79, Turbidity: 886.76 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (439645) app_main: Display task: Received data from queue[0m
+
+[0;33mW (443375) security1: Invalid state of session 0 (expected 2). Restarting session.[0m
+[1;31mE (443375) security1: Closing old session with id 1300158653[0m
+[0;32mI (443765) app_network: Secured session established![0m
+[0;32mI (443845) esp_rmaker_node_config: Generated Node config of length 2262[0m
+[0;32mI (446125) esp_rmaker_param: Received params: {"Servo":{"Power":true}}[0m
+[0;32mI (446125) esp_rmaker_param: Found 1 params in write request for Servo[0m
+[0;32mI (446125) app_main: Received write request via : Local[0m
+[0;32mI (446125) app_main: Received value = true for Servo - Power[0m
+Servo angle set to: 1
+[0;32mI (446135) esp_rmaker_param: Reporting params: {"Servo":{"Power":true}}[0m
+[0;32mI (446145) app_main: Servo angle changed to: 1 (from RainMaker)[0m
+
+[0;32mI (446755) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (447345) esp_rmaker_param: Received params: {"Servo":{"Power":false}}[0m
+[0;32mI (447355) esp_rmaker_param: Found 1 params in write request for Servo[0m
+[0;32mI (447355) app_main: Received write request via : Local[0m
+[0;32mI (447355) app_main: Received value = false for Servo - Power[0m
+Servo angle set to: 2
+[0;32mI (447365) esp_rmaker_param: Reporting params: {"Servo":{"Power":false}}[0m
+[0;32mI (447375) app_main: Servo angle changed to: 0 (from RainMaker)[0m
+
+[0;32mI (447925) app_main: Control task: Received data[0m
+[0;32mI (447925) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[1;31mE (447925) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (447925) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[1;31mE (447935) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (447945) app_main: Updated Temperature: 26.00[0m
+[0;32mI (447955) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (447955) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (447965) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.34734}}[0m
+[1;31mE (447965) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (447975) app_main: Updated pH: 8.35[0m
+[0;32mI (447975) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (447985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (447995) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":900.71515}}[0m
+[1;31mE (447995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (448005) app_main: Updated Turbidity: 900.72[0m
+[0;32mI (448005) app_main: pH: 8.35, Turbidity: 900.72 NTU, Temp: 26.00 C[0m
+[0;32mI (448985) esp_rmaker_param: Received params: {"Water Drain":{"Power":true}}[0m
+[0;32mI (448985) esp_rmaker_param: Found 1 params in write request for Water Drain[0m
+[0;33mW (448995) esp_rmaker_device: No write callback for device Water Drain[0m
+Updated OLED display
+[0;32mI (449745) app_main: Display task: Received data from queue[0m
+
+[0;32mI (451755) esp_rmaker_param: Received params: {"Water Drain":{"Power":false}}[0m
+[0;32mI (451755) esp_rmaker_param: Found 1 params in write request for Water Drain[0m
+[0;33mW (451755) esp_rmaker_device: No write callback for device Water Drain[0m
+[0;33mW (456765) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (456765) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (456805) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (458015) app_main: Control task: Received data[0m
+[0;32mI (458015) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (458025) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (458025) app_main: Updated Temperature: 26.00[0m
+[0;32mI (458025) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (458035) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (458035) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":7.77691}}[0m
+[1;31mE (458045) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (458055) app_main: Updated pH: 7.78[0m
+[0;32mI (458055) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (458065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (458065) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":1402.81519}}[0m
+[1;31mE (458075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (458085) app_main: Updated Turbidity: 1402.82[0m
+[0;32mI (458085) app_main: pH: 7.78, Turbidity: 1402.82 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (459855) app_main: Display task: Received data from queue[0m
+
+[0;32mI (466845) app_main: Sensor task: Sent data to queues[0m
+[0;32mI (468095) app_main: Control task: Received data[0m
+[0;32mI (468095) esp_rmaker_param: Reporting Time Series Data for Temperature Sensor.Temperature[0m
+[0;32mI (468105) esp_rmaker_param: Reporting params: {"Temperature Sensor":{"Temperature":26.00000}}[0m
+[0;32mI (468105) app_main: Updated Temperature: 26.00[0m
+[0;32mI (468105) esp_rmaker_param: Reporting Time Series Data for pH Sensor.pH[0m
+[1;31mE (468115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (468115) esp_rmaker_param: Reporting params: {"pH Sensor":{"pH":8.21131}}[0m
+[1;31mE (468125) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (468135) app_main: Updated pH: 8.21[0m
+[0;32mI (468135) esp_rmaker_param: Reporting Time Series Data for Turbidity Sensor.Turbidity[0m
+[1;31mE (468145) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (468145) esp_rmaker_param: Reporting params: {"Turbidity Sensor":{"Turbidity":826.43683}}[0m
+[1;31mE (468155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (468165) app_main: Updated Turbidity: 826.44[0m
+[0;32mI (468165) app_main: pH: 8.21, Turbidity: 826.44 NTU, Temp: 26.00 C[0m
+Updated OLED display
+[0;32mI (469955) app_main: Display task: Received data from queue[0m
+

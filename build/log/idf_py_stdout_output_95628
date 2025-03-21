@@ -1,0 +1,22 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/build/bootloader/esp-idf/esptool_py && /home/thanhvo/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/thanhvo/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0xc000 bootloader 0x1000 /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/build/bootloader/bootloader.bin
+Bootloader binary size 0x65b0 bytes. 0x4a50 bytes (42%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+In file included from /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/main/app_main.c:10:
+/home/thanhvo/esp/v5.4/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating ld/sections.ld
+info: INFO: Symbol GPIO_RANGE_MAX defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/components/ssd1306/Kconfig.projbuild:3
+    /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/lib/DFRobotDFPlayerMini/Kconfig.projbuild:3
+[5/7] Linking CXX executable PRJ-PBL3-IOT-ESPIDF.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/build/PRJ-PBL3-IOT-ESPIDF.bin
+[7/7] cd /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/build/esp-idf/esptool_py && /home/thanhvo/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/thanhvo/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0xc000 partition --type app /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/build/partition_table/partition-table.bin /home/thanhvo/User_space/prj-PBL3-IOT-ESPIDF/build/PRJ-PBL3-IOT-ESPIDF.bin
+PRJ-PBL3-IOT-ESPIDF.bin binary size 0x160660 bytes. Smallest app partition is 0x1e0000 bytes. 0x7f9a0 bytes (27%) free.

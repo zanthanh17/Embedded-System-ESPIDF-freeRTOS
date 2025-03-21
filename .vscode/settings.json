@@ -1,0 +1,25 @@
+{
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32"
+  },
+  "idf.openOcdConfigs": [
+    "interface/ftdi/esp32_devkitj_v1.cfg",
+    "target/esp32-solo-1.cfg"
+  ],
+  "idf.flashType": "UART",
+  "idf.port": "/dev/ttyUSB0",
+  "files.associations": {
+    "ssd1306.h": "c",
+    "font8x8_basic.h": "c",
+    "app_reset.h": "c",
+    "app_priv.h": "c",
+    "ws2812_led.h": "c",
+    "esp_rmaker_core.h": "c",
+    "math.h": "c",
+    "sdkconfig.h": "c",
+    "esp_rmaker_standard_types.h": "c",
+    "esp_rmaker_standard_params.h": "c",
+    "esp_rmaker_standard_devices.h": "c",
+    "esp_rmaker_scenes.h": "c"
+  }
+}
